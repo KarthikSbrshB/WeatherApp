@@ -10,7 +10,7 @@ search.addEventListener('click', () => {
     if (city === '')
         return;
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=4418a91482ac6355afae1999f7aeffba`).then(response => response.json()).then(json => {
+    fetch(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=4418a91482ac6355afae1999f7aeffba`).then(response => response.json()).then(json => {
         
         if(json.cod === '404'){
 
